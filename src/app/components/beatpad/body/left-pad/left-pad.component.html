@@ -1,0 +1,148 @@
+<div class="">
+  <div class="flex">
+    <!-- VOLUME -->
+    <div class="w-24 bg-green-200">
+      <div class="absolute top-0 w-24 h-[200px] bg-red-500"></div>
+    </div>
+
+    <!-- BUTTONS AND PADS -->
+    <div class="flex-1">
+      <!-- LABEL -->
+      <div class="flex items-center justify-between gap-1">
+        <div [style]="beatpadTheme[selectedTheme].body.left.line"></div>
+        <div
+          [style]="beatpadTheme[selectedTheme].body.left.text"
+          class="font-semibold"
+        >
+          PERFORMANCE&nbsp;MODES
+        </div>
+        <div [style]="beatpadTheme[selectedTheme].body.left.line"></div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <!-- BUTTONS -->
+
+        <div class="flex items-center justify-between px-4">
+          <!-- BUTTON1 -->
+          <div class="grid gap-[2px]">
+            <app-performance-button
+              [selectedTheme]="0"
+              [isSelectedButton]="false"
+              [buttonLabel]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[0]
+                  .label
+              "
+              [selectedButton]="0"
+            ></app-performance-button>
+            <div
+              [style]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[0]
+                  .descriptionStyle
+              "
+            >
+              <span>
+                {{
+                  beatpadTheme[selectedTheme].body.left.performanceButtons[0]
+                    .description
+                }}
+              </span>
+            </div>
+          </div>
+          <!-- BUTTON2 -->
+          <div class="grid gap-[2px]">
+            <app-performance-button
+              [selectedTheme]="0"
+              [isSelectedButton]="false"
+              [buttonLabel]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[1]
+                  .label
+              "
+              [selectedButton]="1"
+            ></app-performance-button>
+            <div
+              [style]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[1]
+                  .descriptionStyle
+              "
+            >
+              <span>
+                {{
+                  beatpadTheme[selectedTheme].body.left.performanceButtons[1]
+                    .description
+                }}
+              </span>
+            </div>
+          </div>
+          <!-- BUTTON3 -->
+          <div class="grid gap-[2px]">
+            <app-performance-button
+              [selectedTheme]="0"
+              [isSelectedButton]="false"
+              [buttonLabel]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[2]
+                  .label
+              "
+              [selectedButton]="2"
+            ></app-performance-button>
+            <div
+              [style]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[2]
+                  .descriptionStyle
+              "
+            >
+              <span>
+                {{
+                  beatpadTheme[selectedTheme].body.left.performanceButtons[2]
+                    .description
+                }}
+              </span>
+            </div>
+          </div>
+          <!-- BUTTON4 -->
+          <div class="grid gap-[2px]">
+            <app-performance-button
+              [selectedTheme]="0"
+              [isSelectedButton]="false"
+              [buttonLabel]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[3]
+                  .label
+              "
+              [selectedButton]="3"
+            ></app-performance-button>
+            <div
+              [style]="
+                beatpadTheme[selectedTheme].body.left.performanceButtons[3]
+                  .descriptionStyle
+              "
+            >
+              <span>
+                {{
+                  beatpadTheme[selectedTheme].body.left.performanceButtons[3]
+                    .description
+                }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PADS -->
+        <div class="w-full">
+          <!-- PAD1 -->
+          <!-- <div class="border-2 border-black">
+            <div class="relative"> -->
+          <!-- REFLECTION -->
+          <!-- <div class="absolute top-0"></div>
+              <div></div>
+              <div class="absolute bottom-0"></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISC -->
+  <div></div>
+
+  <!-- BUTTONS -->
+  <div></div>
+</div>

@@ -1,0 +1,67 @@
+<div
+  (click)="selectButton()"
+  class="flex items-center justify-between"
+  [class]="
+    isSelectedButton
+      ? 'scale-[.99] transition-transform duration-[50]'
+      : 'scale-100 transition-transform duration-[50]'
+  "
+>
+  <div
+    [style]="
+      isSelectedButton
+        ? beatpadTheme[selectedTheme].body.left.performanceButtons[
+            selectedButton
+          ].activeParent1
+        : beatpadTheme[selectedTheme].body.left.performanceButtons[
+            selectedButton
+          ].parent1
+    "
+  >
+    <button class="relative">
+      <div
+        [style]="
+          beatpadTheme[selectedTheme].body.left.performanceButtons[
+            selectedButton
+          ].parent2
+        "
+      >
+        <div
+          [style]="
+            isSelectedButton
+              ? beatpadTheme[selectedTheme].body.left.performanceButtons[
+                  selectedButton
+                ].activeParent3
+              : beatpadTheme[selectedTheme].body.left.performanceButtons[
+                  selectedButton
+                ].parent3
+          "
+        >
+          <span
+            [style]="
+              isSelectedButton
+                ? beatpadTheme[selectedTheme].body.left.performanceButtons[
+                    selectedButton
+                  ].activeText
+                : beatpadTheme[selectedTheme].body.left.performanceButtons[
+                    selectedButton
+                  ].defaultText
+            "
+            >{{ buttonLabel }}
+          </span>
+        </div>
+      </div>
+
+      <!-- REFLECTION -->
+
+      <!-- TOP -->
+      <div
+        class="absolute translate-x-[4px] top-0 w-[88%] h-[2px] bg-[rgba(255,255,255,0.2)] rounded-tr-full rounded-tl-full"
+      ></div>
+      <!-- BOTTOM -->
+      <div
+        class="absolute translate-x-[6px] bottom-[3px] w-[83%] h-[2px] bg-[rgba(255,255,255,0.2)] rounded-br-full rounded-bl-full"
+      ></div>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<main class="flex justify-center">
+  <div
+    class="flex justify-center items-center max-w-[1280px] min-w-[1280px]"
+    [style.background]="beatpadTheme[selectedTheme].background"
+  >
+    <div class="w-full" style="box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5)">
+      <div class="relative border-4 border-[#0d0d0b] my-3 mx-4 rounded-lg">
+        <!-- HEADER -->
+        <app-header></app-header>
+
+        <!-- BODY -->
+        <div class="flex w-full h-[620px]">
+          <!-- LEFT PAD -->
+          <app-left-pad class="flex-1"></app-left-pad>
+
+          <!-- CENTER CONTROL -->
+          <app-center-control class="w-72"></app-center-control>
+
+          <!-- RIGHT PAD -->
+          <app-right-pad class="flex-1"></app-right-pad>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

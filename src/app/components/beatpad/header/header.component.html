@@ -1,0 +1,62 @@
+<div class="flex mt-6">
+  <div class="w-24"></div>
+  <!-- HEADER CENTER -->
+  <div
+    class="flex flex-1 border-gray-50 rounded-2xl header-border"
+    [style.background]="beatpadTheme[selectedTheme].headerBg"
+  >
+    <!-- LOGO -->
+    <div class="grid place-items-center gap-2 py-4 px-2">
+      <div
+        class="flex items-center justify-center bg-gradient-to-br from-[#dddddd] to-[#ffffff] rounded-lg"
+      >
+        <span [style]="beatpadTheme[selectedTheme].header.logo">e-</span>
+        <span [style]="beatpadTheme[selectedTheme].header.fontLogo"
+          >BEATPAD 2</span
+        >
+      </div>
+      <!-- LINE -->
+      <div class="flex">
+        <div
+          *ngFor="
+            let _ of [].constructor(
+              beatpadTheme[selectedTheme].header.logoLine.count
+            );
+            let i = index
+          "
+          [style]="beatpadTheme[selectedTheme].header.logoLine.style"
+          class="ml-1"
+        ></div>
+      </div>
+    </div>
+    <!-- SCREEN or MODULE -->
+    <div class="flex items-end justify-center w-full flex-1 mb-3 text-white">
+      <div class="w-[90%] h-8 border-b border-b-[#8a8893] rounded-b-xl"></div>
+    </div>
+    <!-- MODEL -->
+    <div class="grid place-items-center gap-2 py-4 px-2">
+      <div>
+        <span [style]="beatpadTheme[selectedTheme].header.ownerName"
+          >elyric</span
+        >
+        <span [style]="beatpadTheme[selectedTheme].header.ownerLastname"
+          >manatad</span
+        >
+      </div>
+      <!-- LINE -->
+      <div class="flex">
+        <div
+          *ngFor="
+            let _ of [].constructor(
+              beatpadTheme[selectedTheme].header.logoLine.count
+            );
+            let i = index
+          "
+          [style]="beatpadTheme[selectedTheme].header.logoLine.style"
+          class="ml-1"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-24"></div>
+</div>
